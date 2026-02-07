@@ -1,0 +1,13 @@
+package tn.esprit.astba;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class AstbaApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(AstbaApplication.class, args);
+    }
+
+}

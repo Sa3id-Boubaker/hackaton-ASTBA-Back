@@ -38,7 +38,13 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .authorizeHttpRequests(auth -> auth
+                        // Routes publiques (sans authentification)
                         .requestMatchers("/api/auth/**").permitAll()
+
+                        // Routes admin (seulement pour ROLE_ADMIN)
+                        .requestMatchers("/api/admin/**").hasRole("ADMIN")
+
+                        // Toutes les autres routes nécessitent une authentification
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session

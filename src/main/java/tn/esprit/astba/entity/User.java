@@ -36,7 +36,7 @@ public class User {
     private String numTelephone;
 
     @Column(nullable = false)
-    private Boolean status = true;
+    private Boolean status = false;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -47,6 +47,9 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     private niveauCapacite niveauCapacite;
+
+    @Column(nullable = false)
+    private Boolean mustChangePassword = false;
 
     public enum Role {
         ADMIN,

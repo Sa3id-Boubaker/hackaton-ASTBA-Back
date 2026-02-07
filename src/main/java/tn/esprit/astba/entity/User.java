@@ -46,7 +46,7 @@ public class User {
     private String numTelephoneParent;
 
     @Enumerated(EnumType.STRING)
-    private niveauCapacite niveauCapacite;
+    private NiveauCapacite niveauCapacite;
 
     public enum Role {
         ADMIN,
@@ -55,7 +55,7 @@ public class User {
         ELEVE
     }
 
-    public enum niveauCapacite {
+    public enum NiveauCapacite {
         STANDARD,
         SUPPORT
     }
